@@ -1,7 +1,7 @@
 package decorator
 
 import (
-	"lanvard/foundation"
+	"github.com/lanvard/foundation"
 )
 
 type Bootstrap interface {
