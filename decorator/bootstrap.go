@@ -5,5 +5,5 @@ import (
 )
 
 type Bootstrap interface {
-	Bootstrap(app foundation.Application) foundation.Application
+	Bootstrap(app *foundation.Application) *foundation.Application
 }
