@@ -5,5 +5,5 @@ import (
 )
 
 type RegisterServiceProvider interface {
-	Register(app foundation.Application) foundation.Application
+	Register(app *foundation.Application) *foundation.Application
 }
