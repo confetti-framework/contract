@@ -1,9 +1,9 @@
-package http
+package inter
 
 import (
 	"net/http"
 )
 
-type Kernel interface {
+type HttpKernel interface {
 	Handle(request *http.Request) http.ResponseWriter
 }
