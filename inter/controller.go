@@ -1,3 +1,3 @@
 package inter
 
-type ControllerMethod func(Request) Response
+type Controller func(Request) Response
