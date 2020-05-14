@@ -14,4 +14,6 @@ type Request interface {
 	UrlValues() UrlValues
 	SetUrlValues(vars map[string]string) Request
 	QueryValues() UrlValues
+	Header(key string) string
+	Headers() http.Header
 }

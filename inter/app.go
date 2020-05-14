@@ -16,7 +16,7 @@ type App interface {
 	// Register an existing instance as shared in the container.
 	Instance(abstract interface{}, concrete interface{}) interface{}
 
-	// // Register an existing instance as shared in the container without an abstract
+	// Register an existing instance as shared in the container without an abstract
 	BindStruct(concrete interface{}) interface{}
 
 	// Bind all of the application paths in the container.
