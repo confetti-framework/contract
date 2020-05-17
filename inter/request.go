@@ -11,9 +11,10 @@ type Request interface {
 	SetContent(content string) Request
 	Method() string
 	Source() http.Request
-	UrlValues() UrlValues
+	UrlValue(key string) Value
 	SetUrlValues(vars map[string]string) Request
-	QueryValues() UrlValues
+	QueryValue(key string) Value
+	QueryValues(key string) []Value
 	Header(key string) string
 	Headers() http.Header
 }
