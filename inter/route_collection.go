@@ -1,7 +1,6 @@
 package inter
 
-type Routes = []Route
-type MapMethodRoutes map[string]Routes
+type MapMethodRoutes map[string][]Route
 
 type RouteCollection interface {
 	SetApp(app App)
