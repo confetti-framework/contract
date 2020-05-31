@@ -10,5 +10,6 @@ type RouteCollection interface {
 	All() []Route
 	Match(request Request) Route
 	Prefix(prefix string) RouteCollection
+	Name(name string) RouteCollection
 }
 
