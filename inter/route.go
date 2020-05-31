@@ -1,7 +1,7 @@
 package inter
 
 type Route interface {
-	Url() string
+	Uri() string
 	Method() string
 	Controller() Controller
 	SetPrefix(prefix string) Route
@@ -10,7 +10,9 @@ type Route interface {
 	RouteOptions() RouteOptions
 	Constraint() map[string]string
 	SetConstraint(parameter string, regex string) Route
-	SetUrl(url string) Route
+	SetUri(url string) Route
+	SetName(name string) Route
+	Named(pattern ...string) bool
 }
 
 type RouteOptions interface {
