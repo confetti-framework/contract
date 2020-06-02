@@ -11,6 +11,7 @@ type Route interface {
 	Constraint() map[string]string
 	SetConstraint(parameter string, regex string) Route
 	SetUri(url string) Route
+	Name() string
 	SetName(name string) Route
 	Named(pattern ...string) bool
 }
