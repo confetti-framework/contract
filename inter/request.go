@@ -17,4 +17,5 @@ type Request interface {
 	QueryValues(key string) []Value
 	Header(key string) string
 	Headers() http.Header
+	Route() Route
 }

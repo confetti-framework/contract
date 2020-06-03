@@ -1,8 +1,8 @@
 package inter
 
-type MiddlewareDestination func(data Request) Response
+type MiddlewareDestination func(request Request) Response
 
 type Pipe interface {
-	Handle(data Request, next MiddlewareDestination) Response
+	Handle(request Request, next MiddlewareDestination) Response
 }
 
