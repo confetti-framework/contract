@@ -2,6 +2,7 @@ package inter
 
 type Route interface {
 	Uri() string
+	SetUri(url string) Route
 	Method() string
 	Controller() Controller
 	SetPrefix(prefix string) Route
@@ -10,10 +11,13 @@ type Route interface {
 	RouteOptions() RouteOptions
 	Constraint() map[string]string
 	SetConstraint(parameter string, regex string) Route
-	SetUri(url string) Route
+	Domain() string
+	SetDomain(domain string) Route
 	Name() string
 	SetName(name string) Route
 	Named(pattern ...string) bool
+	Middleware() []HttpMiddleware
+	SetMiddleware(middlewares []HttpMiddleware) Route
 }
 
 type RouteOptions interface {

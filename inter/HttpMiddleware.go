@@ -1,8 +1,8 @@
 package inter
 
-type MiddlewareDestination func(request Request) Response
+type MiddlewareDestination = Controller
 
-type Pipe interface {
+type HttpMiddleware interface {
 	Handle(request Request, next MiddlewareDestination) Response
 }
 
