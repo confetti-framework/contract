@@ -7,6 +7,7 @@ import (
 type Request interface {
 	App() App
 	SetApp(app App) Request
+	Make(abstract interface{}) interface{}
 	Content() string
 	SetContent(content string) Request
 	Method() string
