@@ -18,10 +18,9 @@ type Route interface {
 	Named(pattern ...string) bool
 	Middleware() []HttpMiddleware
 	SetMiddleware(middlewares []HttpMiddleware) Route
+	SetExcludeMiddleware(middlewares []HttpMiddleware) Route
 }
 
 type RouteOptions interface {
-	Status() int
-	Destination() string
 	Prefixes() []string
 }

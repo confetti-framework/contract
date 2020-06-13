@@ -15,4 +15,5 @@ type RouteCollection interface {
 	Prefix(prefix string) RouteCollection
 	Name(name string) RouteCollection
 	Middleware(...HttpMiddleware) RouteCollection
+	WithoutMiddleware(...HttpMiddleware) RouteCollection
 }
