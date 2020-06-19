@@ -1,6 +1,7 @@
 package inter
 
 type Value interface {
+	Source() interface{}
 	String() string
 	StringE() (string, error)
 	Strings() []string

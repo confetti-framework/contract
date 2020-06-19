@@ -10,12 +10,17 @@ type Request interface {
 	Make(abstract interface{}) interface{}
 	Content() string
 	SetContent(content string) Request
-	Method() string
 	Source() http.Request
-	UrlValue(key string) Value
+	Method() string
+	IsMethod(method string) bool
+	Path() string
+	Url() string
+	FullUrl() string
+	All() Bag
+	Value(key string) Value
+	ValueOr(key string, value interface{}) Value
+	Values(key string) Collection
 	SetUrlValues(vars map[string]string) Request
-	QueryValue(key string) Value
-	QueryValues(key string) []Value
 	Header(key string) string
 	Headers() http.Header
 	Route() Route
