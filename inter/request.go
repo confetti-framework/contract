@@ -5,6 +5,8 @@ import (
 	"net/http"
 )
 
+const RequestBodyDecoder = "request_body_decoder"
+
 type Request interface {
 	App() App
 	SetApp(app App) Request
@@ -17,10 +19,10 @@ type Request interface {
 	Path() string
 	Url() string
 	FullUrl() string
-	All() support.Map
-	Value(key string) support.Value
-	ValueOr(key string, value interface{}) support.Value
-	Values(key string) support.Collection
+	Body(key string) support.Value
+	BodyOr(key string, defaultValue interface{}) support.Value
+	Parameter(key string) support.Value
+	ParameterOr(key string, defaultValue interface{}) support.Value
 	SetUrlValues(vars map[string]string) Request
 	Query(key string) support.Value
 	QueryOr(key string, defaultValue interface{}) support.Value
