@@ -8,6 +8,7 @@ import (
 const RequestBodyDecoder = "request_body_decoder"
 
 type Request interface {
+	HeaderHolder
 	App() App
 	SetApp(app App) Request
 	Make(abstract interface{}) interface{}
@@ -26,7 +27,5 @@ type Request interface {
 	SetUrlValues(vars map[string]string) Request
 	Query(key string) support.Value
 	QueryOr(key string, defaultValue interface{}) support.Value
-	Header(key string) string
-	Headers() http.Header
 	Route() Route
 }
