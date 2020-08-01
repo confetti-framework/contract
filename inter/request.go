@@ -20,8 +20,8 @@ type Request interface {
 	Path() string
 	Url() string
 	FullUrl() string
-	Body(key string) support.Value
-	BodyOr(key string, defaultValue interface{}) support.Value
+	Body(key ...string) support.Value
+	BodyOr(keys string, defaultValue interface{}) support.Value
 	Parameter(key string) support.Value
 	ParameterOr(key string, defaultValue interface{}) support.Value
 	SetUrlValues(vars map[string]string) Request
