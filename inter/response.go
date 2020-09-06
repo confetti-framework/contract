@@ -1,12 +1,13 @@
 package inter
 
-import "net/http"
+const ResponseBodyEncoder = "response_body_encoder"
 
 type Response interface {
+	HeaderHolder
+	App() App
+	SetApp(app App)
 	Content() string
 	SetContent(content string) Response
 	Status() int
 	SetStatus(status int) Response
-	Header(key string) string
-	Headers() http.Header
 }
