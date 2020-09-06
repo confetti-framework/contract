@@ -1,6 +1,6 @@
 package inter
 
 type ResponseEncoder interface {
-	Can(content interface{}) bool
-	Encode(content interface{}) string
+	IsValid(object interface{}) bool
+	Transform(object interface{}) string
 }
