@@ -1,6 +1,6 @@
 package inter
 
-type ResponseEncoder interface {
-	Transformable(object interface{}) bool
-	TransformThrough(object interface{}, encoders []ResponseEncoder) (string, error)
+type Encoder interface {
+	IsAble(object interface{}) bool
+	EncodeThrough(object interface{}, encoders []Encoder) (string, error)
 }
