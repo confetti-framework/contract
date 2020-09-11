@@ -1,7 +1,5 @@
 package inter
 
-const ResponseBodyEncoder = "response_body_encoder"
-
 type Response interface {
 	HeaderHolder
 	App() App
