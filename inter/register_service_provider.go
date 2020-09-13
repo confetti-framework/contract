@@ -1,5 +1,5 @@
 package inter
 
 type RegisterServiceProvider interface {
-	Register(app App) App
+	Register(container Container) Container
 }

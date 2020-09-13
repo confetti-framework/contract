@@ -1,5 +1,5 @@
 package inter
 
 type BootServiceProvider interface {
-	Boot(app App) App
+	Boot(container Container) Container
 }
