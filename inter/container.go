@@ -19,7 +19,8 @@ type Container interface {
 	// Get the container's bindings.
 	Bindings() Bindings
 
-	Copy() Container
+	// Determine if the given abstract type has been bound.
+	Bound(abstract string) bool
 
 	// "Extend" an abstract type in the container.
 	Extend(abstract interface{}, function func(service interface{}) interface{})
