@@ -23,4 +23,5 @@ type Route interface {
 
 type RouteOptions interface {
 	Prefixes() []string
+	Status() int
 }
