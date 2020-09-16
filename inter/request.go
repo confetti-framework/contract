@@ -16,7 +16,6 @@ type Request interface {
 	SetContent(content string) Request
 	Source() http.Request
 	Method() string
-	IsMethod(method string) bool
 	Path() string
 	Url() string
 	FullUrl() string
