@@ -15,6 +15,9 @@ type Request interface {
 	Content() string
 	SetContent(content string) Request
 	Source() http.Request
+	Header(key string) string
+	Headers() http.Header
+	Cookie(key string) http.Cookie
 	Method() string
 	Path() string
 	Url() string
