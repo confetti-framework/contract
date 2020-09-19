@@ -17,7 +17,8 @@ type Request interface {
 	Source() http.Request
 	Header(key string) string
 	Headers() http.Header
-	Cookie(key string) http.Cookie
+	Cookie(key string) string
+	CookieE(key string) (string, error)
 	Method() string
 	Path() string
 	Url() string
