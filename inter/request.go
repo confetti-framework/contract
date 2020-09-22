@@ -19,7 +19,7 @@ type Request interface {
 	Headers() http.Header
 	Cookie(key string) string
 	CookieE(key string) (string, error)
-	FilesE(key string) (support.Files, error)
+	FileE(key string) (support.File, error)
 	Method() string
 	Path() string
 	Url() string
