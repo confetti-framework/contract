@@ -21,6 +21,7 @@ type Request interface {
 	CookieE(key string) (string, error)
 	File(key string) support.File
 	FileE(key string) (support.File, error)
+	FilesE(key string) ([]support.File, error)
 	Method() string
 	Path() string
 	Url() string
