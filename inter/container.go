@@ -3,9 +3,13 @@ package inter
 type Bindings map[string]interface{}
 type Instances map[string]interface{}
 
-type Container interface {
+type Maker interface {
 	// Resolve the given type from the container.
 	Make(abstract interface{}) interface{}
+}
+
+type Container interface {
+	Maker
 
 	// Register a shared binding in the container.
 	Singleton(abstract interface{}, concrete interface{})
