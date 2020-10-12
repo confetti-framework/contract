@@ -8,6 +8,7 @@ type Severity = syslog.Priority
 type Facility = syslog.Priority
 
 type Logger interface {
+	SetApp(app Maker) Logger
 	Log(severity Severity, message string)
 	LogWith(severity Severity, message string, data interface{})
 	Emergency(message string)

@@ -1,7 +1,6 @@
 package inter
 
 type Bindings map[string]interface{}
-type Instances map[string]interface{}
 
 type Container interface {
 	Maker
