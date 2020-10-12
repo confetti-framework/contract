@@ -3,22 +3,17 @@ package inter
 type Bindings map[string]interface{}
 type Instances map[string]interface{}
 
-type Maker interface {
-	// Resolve the given type from the container.
-	Make(abstract interface{}) interface{}
-}
-
 type Container interface {
 	Maker
 
 	// Register a shared binding in the container.
 	Singleton(abstract interface{}, concrete interface{})
 
-	// Register an existing instance as shared in the container.
-	Instance(abstract interface{}, concrete interface{}) interface{}
+	// Register an existing instance as shared in the container with an abstract
+	Bind(abstract interface{}, concrete interface{})
 
-	// // Register an existing instance as shared in the container without an abstract
-	BindStruct(concrete interface{}) interface{}
+	// Register an existing instance as shared in the container without an abstract
+	Instance(concrete interface{}) interface{}
 
 	// Get the container's bindings.
 	Bindings() Bindings
@@ -28,4 +23,9 @@ type Container interface {
 
 	// "Extend" an abstract type in the container.
 	Extend(abstract interface{}, function func(service interface{}) interface{})
+}
+
+type Maker interface {
+	// Resolve the given type from the container.
+	Make(abstract interface{}) interface{}
 }

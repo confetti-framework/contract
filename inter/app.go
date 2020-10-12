@@ -13,8 +13,15 @@ type App interface {
 	Singleton(abstract interface{}, concrete interface{})
 
 	// Register an existing instance as shared in the container.
-	Instance(abstract interface{}, concrete interface{}) interface{}
+	Bind(abstract interface{}, concrete interface{})
 
 	// Register an existing instance as shared in the container without an abstract
-	BindStruct(concrete interface{}) interface{}
+	Instance(concrete interface{}) interface{}
+
+	Environment() (string, error)
+
+	IsEnvironment(environments ...string) bool
+
+	// The Log method gives you an instance of a logger. You can write your log messages to this instance.
+	Log() Logger
 }
