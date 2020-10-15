@@ -23,5 +23,5 @@ type App interface {
 	IsEnvironment(environments ...string) bool
 
 	// The Log method gives you an instance of a logger. You can write your log messages to this instance.
-	Log() Logger
+	Log(channels ...string) Logger
 }
