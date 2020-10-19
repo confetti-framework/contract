@@ -12,8 +12,8 @@ type Request interface {
 	App() App
 	SetApp(app App)
 	Make(abstract interface{}) interface{}
-	Content() string
-	SetContent(content string) Request
+	Body() string
+	SetBody(body string) Request
 	Source() http.Request
 	Header(key string) string
 	Headers() http.Header
@@ -27,8 +27,8 @@ type Request interface {
 	Path() string
 	Url() string
 	FullUrl() string
-	Body(key ...string) support.Value
-	BodyOr(keys string, defaultValue interface{}) support.Value
+	Content(key ...string) support.Value
+	ContentOr(keys string, defaultValue interface{}) support.Value
 	Parameter(key string) support.Value
 	ParameterOr(key string, defaultValue interface{}) support.Value
 	SetUrlValues(vars map[string]string) Request

@@ -25,6 +25,9 @@ type Container interface {
 }
 
 type Maker interface {
-	// Resolve the given type from the container.
+	// MakeE the given type from the container.
 	Make(abstract interface{}) interface{}
+
+	// MakeE the given type from the container.
+	MakeE(abstract interface{}) (interface{}, error)
 }
