@@ -1,17 +1,14 @@
 package inter
 
 import (
-	"github.com/lanvard/syslog"
+	"github.com/lanvard/syslog/level"
 )
-
-type Severity = syslog.Priority
-type Facility = syslog.Priority
 
 type Logger interface {
 	SetApp(app Maker) Logger
 	Clear()
-	Log(severity Severity, message string, arguments ...interface{})
-	LogWith(severity Severity, message string, data interface{})
+	Log(severity level.Level, message string, arguments ...interface{})
+	LogWith(severity level.Level, message string, data interface{})
 	Emergency(message string, arguments ...interface{})
 	EmergencyWith(message string, data interface{})
 	Alert(message string, arguments ...interface{})
