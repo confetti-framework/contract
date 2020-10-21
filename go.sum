@@ -5,6 +5,7 @@ github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqx
 github.com/lanvard/contract v0.0.0/go.mod h1:L8UPJZgqohrv9Qdsr241S8Nf609MaevWjwM9I2rGSG4=
 github.com/lanvard/syslog v0.0.0-20201006215111-98d4d91dbaa8 h1:UNQVQUBzWHftviJ5fZi+QQs4NS3Jbwfe+GoYP8U3oCw=
 github.com/lanvard/syslog v0.0.0-20201006215111-98d4d91dbaa8/go.mod h1:8a4fckuv2otec6e5QrkR0xwJ82e5PA84ot7wjDWhXQQ=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/spf13/cast v1.3.1 h1:nFm6S0SMdyzrzcmThSipiEubIDy8WEXKNZ0UOgiRpng=
