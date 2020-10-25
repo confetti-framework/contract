@@ -1,14 +1,14 @@
 package inter
 
 import (
-	"github.com/lanvard/syslog/level"
+	"github.com/lanvard/syslog/log_level"
 )
 
 type Logger interface {
 	SetApp(app Maker) Logger
 	Clear()
-	Log(severity level.Level, message string, arguments ...interface{})
-	LogWith(severity level.Level, message string, data interface{})
+	Log(severity log_level.Level, message string, arguments ...interface{})
+	LogWith(severity log_level.Level, message string, data interface{})
 	Emergency(message string, arguments ...interface{})
 	EmergencyWith(message string, data interface{})
 	Alert(message string, arguments ...interface{})
