@@ -12,7 +12,7 @@ type Request interface {
 	App() App
 	SetApp(app App)
 	Make(abstract interface{}) interface{}
-	Body() string
+	GetBody() string
 	SetBody(body string) Request
 	Source() http.Request
 	Header(key string) string

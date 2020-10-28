@@ -4,10 +4,10 @@ type Response interface {
 	HeaderHolder
 	App() App
 	SetApp(app App)
-	Content(content interface{})
 	GetContent() interface{}
-	Body() string
-	SettmpBody(body string) Response
-	Status(status int) Response
+	Content(content interface{})
+	GetBody() string
+	Body(body string) Response
 	GetStatus() int
+	Status(status int) Response
 }
