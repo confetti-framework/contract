@@ -3,11 +3,11 @@ package inter
 type Response interface {
 	HeaderHolder
 	App() App
-	Content() interface{}
-	SetContent(content interface{})
 	SetApp(app App)
+	Content(content interface{})
+	GetContent() interface{}
 	Body() string
-	SetBody(body string) Response
-	Status() int
-	SetStatus(status int) Response
+	SettmpBody(body string) Response
+	Status(status int) Response
+	GetStatus() int
 }
