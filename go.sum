@@ -3,6 +3,7 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/lanvard/contract v0.0.0/go.mod h1:L8UPJZgqohrv9Qdsr241S8Nf609MaevWjwM9I2rGSG4=
+github.com/lanvard/errors v0.9.1 h1:Y262fxNjNFbTDky6v36+TtSmJ9oyBx/SjQTOcza5EAQ=
 github.com/lanvard/errors v0.9.1/go.mod h1:dmkl+K5ltsuM06o4qpfWoSW7lbNY7Mp0IvIsZk6v7PI=
 github.com/lanvard/syslog v0.0.0-20201006215111-98d4d91dbaa8 h1:UNQVQUBzWHftviJ5fZi+QQs4NS3Jbwfe+GoYP8U3oCw=
 github.com/lanvard/syslog v0.0.0-20201006215111-98d4d91dbaa8/go.mod h1:8a4fckuv2otec6e5QrkR0xwJ82e5PA84ot7wjDWhXQQ=
