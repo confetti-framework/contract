@@ -7,6 +7,7 @@ import (
 type Logger interface {
 	SetApp(app Maker) Logger
 	Clear()
+	Group(group string) Logger
 	Log(severity log_level.Level, message string, arguments ...interface{})
 	LogWith(severity log_level.Level, message string, data interface{})
 	Emergency(message string, arguments ...interface{})
