@@ -5,7 +5,7 @@ import (
 )
 
 type Logger interface {
-	SetApp(app Maker) Logger
+	SetApp(app AppReader) Logger
 	Clear()
 	Group(group string) Logger
 	Log(severity log_level.Level, message string, arguments ...interface{})

@@ -3,7 +3,7 @@ package inter
 type Bindings map[string]interface{}
 
 type Container interface {
-	Maker
+	AppReader
 
 	// Register a shared binding in the container.
 	Singleton(abstract interface{}, concrete interface{})
@@ -24,7 +24,7 @@ type Container interface {
 	Extend(abstract interface{}, function func(service interface{}) interface{})
 }
 
-type Maker interface {
+type AppReader interface {
 	// MakeE the given type from the container.
 	Make(abstract interface{}) interface{}
 

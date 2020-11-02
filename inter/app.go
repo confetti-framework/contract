@@ -1,7 +1,7 @@
 package inter
 
 type App interface {
-	Maker
+	AppReader
 
 	// Get the service container
 	Container() *Container
