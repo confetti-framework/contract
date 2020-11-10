@@ -8,7 +8,6 @@ import (
 const RequestBodyDecoder = "request_body_decoder"
 
 type Request interface {
-	HeaderHolder
 	App() App
 	SetApp(app App)
 	Make(abstract interface{}) interface{}

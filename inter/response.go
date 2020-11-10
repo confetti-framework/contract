@@ -1,7 +1,8 @@
 package inter
 
+import "net/http"
+
 type Response interface {
-	HeaderHolder
 	App() App
 	SetApp(app App)
 	GetContent() interface{}
@@ -10,4 +11,8 @@ type Response interface {
 	Body(body string) Response
 	GetStatus() int
 	Status(status int) Response
+	GetHeader(key string) string
+	GetHeaders() http.Header
+	Header(key, value string) Response
+	Headers(headers http.Header) Response
 }
