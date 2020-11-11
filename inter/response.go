@@ -15,4 +15,6 @@ type Response interface {
 	GetHeaders() http.Header
 	Header(key, value string) Response
 	Headers(headers http.Header) Response
+	Cookie(cookies ...http.Cookie) Response
+	GetCookies() []http.Cookie
 }

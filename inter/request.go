@@ -11,7 +11,7 @@ type Request interface {
 	App() App
 	SetApp(app App)
 	Make(abstract interface{}) interface{}
-	GetBody() string
+	Body() string
 	SetBody(body string) Request
 	Source() http.Request
 	Header(key string) string
