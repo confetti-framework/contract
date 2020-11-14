@@ -13,7 +13,7 @@ type Response interface {
 	Status(status int) Response
 	GetHeader(key string) string
 	GetHeaders() http.Header
-	Header(key, value string) Response
+	Header(key string, values ...string) Response
 	Headers(headers http.Header) Response
 	Cookie(cookies ...http.Cookie) Response
 	GetCookies() []http.Cookie
