@@ -17,4 +17,6 @@ type Response interface {
 	Headers(headers http.Header) Response
 	Cookie(cookies ...http.Cookie) Response
 	GetCookies() []http.Cookie
+	Filename(filename string) Response
+	ShowInBrowser() Response
 }
