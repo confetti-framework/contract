@@ -3,7 +3,7 @@ package inter
 type App interface {
 	AppReader
 
-	// Get the service container
+	// GetE the service container
 	Container() *Container
 
 	// Set the service container

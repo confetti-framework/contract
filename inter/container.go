@@ -14,7 +14,7 @@ type Container interface {
 	// Register an existing instance as shared in the container without an abstract
 	Instance(concrete interface{}) interface{}
 
-	// Get the container's bindings.
+	// GetE the container's bindings.
 	Bindings() Bindings
 
 	// Determine if the given abstract type has been bound.
