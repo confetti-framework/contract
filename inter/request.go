@@ -11,6 +11,7 @@ type Request interface {
 	App() App
 	SetApp(app App)
 	Make(abstract interface{}) interface{}
+	MakeE(abstract interface{}) (interface{}, error)
 	Body() string
 	SetBody(body string) Request
 	Source() http.Request
