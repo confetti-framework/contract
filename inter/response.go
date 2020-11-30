@@ -8,6 +8,7 @@ type Response interface {
 	GetContent() interface{}
 	Content(content interface{})
 	GetBody() string
+	GetBodyE() (string, error)
 	Body(body string) Response
 	GetStatus() int
 	Status(status int) Response
