@@ -8,5 +8,5 @@ type Rule interface {
 
 type RuleWithRequirements interface {
 	Rule
-	Require() []Rule
+	Requirements() []Rule
 }
