@@ -10,3 +10,8 @@ type RuleWithRequirements interface {
 	Rule
 	Requirements() []Rule
 }
+
+type RuleWithApp interface {
+	Rule
+	SetApp(app AppReader) Rule
+}
