@@ -1,7 +1,7 @@
 package inter
 
 import (
-	"github.com/lanvard/syslog/log_level"
+	"github.com/confetti-framework/syslog/log_level"
 )
 
 type Logger interface {

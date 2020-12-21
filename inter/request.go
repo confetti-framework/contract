@@ -1,7 +1,7 @@
 package inter
 
 import (
-	"github.com/lanvard/support"
+	"github.com/confetti-framework/support"
 	"net/http"
 )
 

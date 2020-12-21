@@ -1,6 +1,6 @@
 package inter
 
-import "github.com/lanvard/support"
+import "github.com/confetti-framework/support"
 
 type Rule interface {
 	Verify(value support.Value) error
