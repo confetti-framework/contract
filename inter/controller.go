@@ -1,3 +1,4 @@
 package inter
 
-type Controller func(request Request) Response
+type PipeHolder func(request Request) Response
+type Controller = PipeHolder
