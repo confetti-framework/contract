@@ -3,7 +3,6 @@ package inter
 type MapMethodRoutes map[string][]Route
 
 type RouteCollection interface {
-	SetContainer(container Container)
 	Push(route Route) RouteCollection
 	Merge(routeCollections RouteCollection) RouteCollection
 	All() []Route
