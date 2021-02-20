@@ -7,7 +7,7 @@ import (
 // Logger This interface is the interface you should use to add a logger yourself.
 type Logger interface {
 	SetApp(app AppReader) Logger
-	Clear()
+	Clear() bool
 	Group(group string) Logger
 	Log(severity log_level.Level, message string, arguments ...interface{})
 	LogWith(severity log_level.Level, message string, data interface{})

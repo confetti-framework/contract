@@ -1,9 +1,6 @@
 package inter
 
-import (
-	"net/http"
-)
-
 type HttpKernel interface {
-	Handle(request *http.Request) http.ResponseWriter
+	Handle(request Request) Response
+	RecoverFromMiddlewarePanic(recover interface{}) Response
 }
