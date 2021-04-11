@@ -1,5 +1,7 @@
 package inter
 
+const AppProvider = "app_provider"
+
 type App interface {
 	AppReader
 
